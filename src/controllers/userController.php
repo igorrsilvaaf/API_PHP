@@ -19,12 +19,20 @@ class UserController
         return $queryStatement;
     }
 
-    public function create($nome, $email) {
-        $query = "INSERT INTO " . $this->table_name . " SET nome=:nome, email=:email";
+    public function create($nome, $sobrenome, $email, $telefone, $celular, $cep, $endereco, $cidade, $bairro, $numero){
+        $query = "INSERT INTO " . $this->table_name . " SET nome=:nome, sobrenome=:sobrenome, email=:email, telefone=:telefone, celular=:celular, cep=:cep, endereco=:endereco, cidade=:cidade, bairro=:bairro, numero=:numero";
         $queryStatement = $this->connection->prepare($query);
 
         $queryStatement->bindParam(':nome', $nome);
+        $queryStatement->bindParam(':sobrenome', $sobrenome);
         $queryStatement->bindParam(':email', $email);
+        $queryStatement->bindParam(':telefone', $telefone);
+        $queryStatement->bindParam(':celular', $celular);
+        $queryStatement->bindParam(':cep', $cep);
+        $queryStatement->bindParam(':endereco', $endereco);
+        $queryStatement->bindParam(':cidade', $cidade);
+        $queryStatement->bindParam(':bairro', $bairro);
+        $queryStatement->bindParam(':numero', $numero);
 
         if ($queryStatement->execute()) {
             return true;  // Usuário criado com sucesso
