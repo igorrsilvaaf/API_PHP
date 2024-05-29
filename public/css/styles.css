@@ -1,1 +1,87 @@
-/* Reset CSS */* {    margin: 0;    padding: 0;    box-sizing: border-box;    font-family: 'JetBrains Mono Light', sans-serif;}/* Body Styling */body {    background-image: url(../images/city.jpg);    background-size: cover;    background-position: center;    background-repeat: no-repeat;    background-attachment: fixed;    display: flex;    flex-direction: column;    align-items: center;    padding: 20px;}/* Form Container */form {    background-color: rgba(91, 192, 190, 0.2);    padding: 20px;    border-radius: 10px;    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);    width: 100%;    max-width: 400px;    margin-top: 20px; /* Add margin to separate from the title */}/* Form Header */h1 {    text-align: center;    margin-bottom: 20px;    color: #333;}/* Form Labels */form label {    display: block;    margin-bottom: 5px;    font-weight: normal;    color: #6FFFE9;}/* Form Inputs */form input {    background-color: rgba(30, 47, 64, 0.3);    width: 100%;    padding: 10px;    margin-bottom: 20px;    border: 1px solid #ccc;    border-radius: 5px;    transition: border-color 0.3s ease;}/* Input Focus State */form input:focus {    border-color: #007BFF;}/* Form Button */form button {    width: 100%;    padding: 10px;    background-color: #007BFF;    border: none;    border-radius: 5px;    color: #fff;    font-size: 16px;    cursor: pointer;    transition: background-color 0.3s ease;}/* Button Hover State */form button:hover {    background-color: #0056b3;}/* Form Message */#message {    margin-top: 20px;    text-align: center;    color: #d9534f;}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono Light', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-image: url(../images/city02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Form Container */
+form {
+    background-color: rgba(126, 226, 225, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px; 
+}
+
+/* Form Header */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFF;
+}
+
+/* Form Labels */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #FFF;
+}
+
+/* Form Inputs */
+form input {
+    background-color: rgba(30, 47, 64, 0.3);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.5s ease;
+}
+
+/* Input Focus State */
+form input:focus {
+    border-color: #00181A;
+}
+
+/* Form Button */
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00181A;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover State */
+form button:hover {
+    background-color: #022f33;
+}
+
+/* Form Message */
+#message {
+    margin-top: 20px;
+    text-align: center;
+    color: #d9534f;
+}
