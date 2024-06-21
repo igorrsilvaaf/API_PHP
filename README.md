@@ -1,6 +1,6 @@
 # API de Usuários em PHP
 
-Esta é uma API simples em PHP para gerenciar usuários. Ela oferece operações básicas de CRUD (Create, Read, Update, Delete) para manipulação de dados de usuários em um banco de dados.
+Esta é uma API simples em PHP para cadastro de usuários. Ela oferece uma operação básica de cadastro de usuário.
 
 ## Requisitos
 
