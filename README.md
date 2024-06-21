@@ -1,7 +1,3 @@
-Aqui está um exemplo básico de README para seu código PHP, adequado para o GitHub. Este README explica brevemente o que seu código faz e como configurá-lo:
-
----
-
 # API de Usuários em PHP
 
 Esta é uma API simples em PHP para gerenciar usuários. Ela oferece operações básicas de CRUD (Create, Read, Update, Delete) para manipulação de dados de usuários em um banco de dados.
