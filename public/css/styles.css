@@ -69,7 +69,7 @@ form input {
     transition: border-color 0.5s ease;
 
     /* Cor do texto dentro do input */
-    color: #0f0d0d;
+    color: #FFFFFF;
     -webkit-appearance: none; /* Desabilita estilos padrão do browser */
     -moz-appearance: none;
     appearance: none; /* Para browsers modernos */
@@ -83,7 +83,7 @@ form input:focus {
 /* Estilos para o autocomplete */
 form input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px rgba(54, 77, 77, 0.459) inset; /* Cor do background no input */
-    -webkit-text-fill-color: #000000 !important; /* Cor do texto no autocomplete */
+    -webkit-text-fill-color: #FFFFFF !important; /* Cor do texto no autocomplete */
 }
 
 /* Botão do formulário */

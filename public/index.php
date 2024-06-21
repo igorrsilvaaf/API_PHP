@@ -7,9 +7,7 @@ require_once '../src/config/database.php';
 
 $database = new Database();
 $databaseConnection = $database->getConnection();
-
 $userController = new UserController($databaseConnection);
-
 $request_method = $_SERVER["REQUEST_METHOD"];
 
 switch ($request_method) {
@@ -34,7 +32,7 @@ switch ($request_method) {
                     "endereco" => $endereco,
                     "cidade" => $cidade,
                     "bairro" => $bairro,
-                    "numero" => $numero,
+                    "numero" => $numero
                 );
 
                 array_push($user_arr["records"], $user_item);

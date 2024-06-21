@@ -5,6 +5,7 @@ class UserController
 {
     private $connection;
     private $table_name = "users";
+    private $table_message = "message";
 
     public function __construct($databaseConnection )
     {
@@ -19,7 +20,7 @@ class UserController
         return $queryStatement;
     }
 
-    public function create($nome, $sobrenome, $email, $telefone, $celular, $cep, $endereco, $cidade, $bairro, $numero){
+    public function create($nome, $sobrenome, $email, $telefone, $celular, $cep, $endereco, $cidade, $bairro, $numero, $message) {
         $query = "INSERT INTO " . $this->table_name . " SET nome=:nome, sobrenome=:sobrenome, email=:email, telefone=:telefone, celular=:celular, cep=:cep, endereco=:endereco, cidade=:cidade, bairro=:bairro, numero=:numero";
         $queryStatement = $this->connection->prepare($query);
 
@@ -34,10 +35,21 @@ class UserController
         $queryStatement->bindParam(':bairro', $bairro);
         $queryStatement->bindParam(':numero', $numero);
 
-        if ($queryStatement->execute()) {
-            return true;  // Usuário criado com sucesso
+        if ($queryStatement ->execute()) {
+            $user_id = $this->connection->lastInsertId();
+            return $this->createMessage($user_id, $message);
         } else {
-            return false; // Falha ao criar usuário
+            return false;
         }
+    }
+
+    private function createMessage($user_id, $message){
+        $query = "INSERT INTO " . $this->table_message . " SET user_id=:user_id, message=:message";
+        $queryStatement = $this->connection->prepare($query);
+
+        $queryStatement->bindParam(':user_id', $user_id);
+        $queryStatement->bindParam(':message', $message);
+
+        return $queryStatement->execute();
     }
 }
